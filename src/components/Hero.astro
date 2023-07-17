@@ -1,0 +1,78 @@
+---
+---
+
+<section class="banner">
+	<div class="container">
+		<h1>
+			Welcome to <br>
+			<span>REDEFINE</span>-Kazzak
+		</h1>
+		<h3>Newly formed guild <br>with CE lead experiance</h3>
+		<a href="#" class="button">Apply now</a>
+	</div>
+</section>
+
+<style>
+	h1 {
+		font-size: 60px;
+		margin-bottom: 32px;
+	}
+	span {
+		color: #00a4e0;
+	}
+	h3 {
+		font-size: 36px;
+		font-weight: 400;
+		margin-bottom: 32px;
+	}
+	.banner {
+		position: relative;
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		background-image: url('/banner-img.jpg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		color: white;
+	}
+
+	.banner:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 0;
+		background-color: #12002F;
+		opacity: 0.6;
+	}
+
+	.button {
+		display: inline-block;
+		color: #FFF;
+		background-color: #038abc;
+		padding: 12px 20px;
+		border-radius: 16px;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	@media (max-width: 1024px) {
+		h1, h3 {
+		font-size: 40px;
+		}
+	}
+
+	@media (max-width: 767px) {
+		h1, h3 {
+			font-size: 35px;
+		}
+		h3 {
+			font-size: 25px;
+		}
+	}
+
+</style>

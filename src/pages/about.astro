@@ -1,0 +1,55 @@
+---
+import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu } from "astro-navbar";
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Banner from '../components/Banner.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<Banner />
+
+        <section class="container mt-3">
+            <div class="about-us">
+                <div class="intro">
+                    <h1>Who's Redefine</h1>
+                    <p>Our guild consist of a group of people that strive to have a strong community with a great sense of friendship. 
+                        We always ensure to have all our members feel part of our family no matter your role. 
+                        Our belief is that through a stong set of ground rules we can create a toxic free raid environment that thrives good progression during raids.
+                    </p>
+                </div>
+                <div class="team mt-3">
+                    <h2>Our raiding team</h2>
+                    <p>Our raid team will be built with the intent of getting Cutting Edge, we try and maximise our performance during and outside of raid. That doesn't mean we don't like a bit of banter every now and then!</p>
+                </div>
+                <div class="dungeons mt-3">
+                    <h2>Guild M+ groups?</h2>
+                    <p>A lot of our members are active in the M+ scene and love pushing their scores as well as getting alts to a high standard also. You should be able to find players to do M+ whether that is either pushing highs, or just chilling in lower for some loot.</p>
+                </div>
+            </div>
+        </section>
+
+</Layout>
+
+
+<style>
+    h1 {
+        font-size: 40px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .mt-3 {
+        margin-top: 3rem;
+    }
+
+    .about-us {
+        width: 100%;
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+</style>
