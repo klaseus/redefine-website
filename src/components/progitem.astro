@@ -1,0 +1,38 @@
+---
+const { profile, date, boss, video, tanks, healers, dps, log } = Astro.props;
+---
+
+<section class="progContainer">
+    <p class="date">{date}</p>
+    <div class="progHeader dflex">
+        <img src={profile}>
+        <h2 class="boss">{boss}</h2>
+    </div>
+    <iframe 
+        width="500px"
+        height="300px" 
+        src={video} 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen></iframe>
+    <p class="composition">Raid composition: 
+            <span style="margin-left: 1px" class="classIcon"><img src="tank.png"></span>{tanks}
+            <span class="classIcon"><img src="healer.png"></span>{healers} 
+            <span class="classIcon"><img src="dps.png"></span>{dps}</p>
+    <p>Warcraftlog: <a href={log}>Kill log of {boss}</a></p>
+</section>
+
+<style>
+    a{
+        text-decoration: underline;
+    }
+    .classIcon{
+        margin-left: 5px;
+        padding-right: 5px;
+        display: inline-block;
+    }
+    .progHeader h2 {
+        margin: 0;
+    }
+</style>
