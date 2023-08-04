@@ -4,25 +4,41 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Banner from '../components/Banner.astro';
 import Progitem from "../components/progitem.astro";
+
+import KillData from "../components/KillData.astro";
+import RashokData from "../data/rashok2.json";
+
 ---
 
 <Layout title="Welcome to Astro.">
 	<Banner />
-  <section class="container mt-3">
-    <Progitem
-      profile = "zskarn.png"
-      date = "31 july"
-      boss = "Zkarn"
-      video = "https://www.youtube.com/embed/ZD6GNhAubpQ"
-      tanks = "2"
-      healers = "4"
-      dps = "14"
-      log = "https://www.warcraftlogs.com/reports/xM8JFAgtLw1YC2BP#fight=last"
-    ></Progitem>
-  </section>
+
+  <div>
+    <ul>
+      {
+        RashokData.map( info => {
+          //Creates a new array based on a function for every element*
+          const matchedDPS = info.character.spec.role.search(dpsinfo => info.character.spec.role.includes("dps"));
+          return matchedDPS;
+          return(
+            <KillData
+              name = {info.character.name}
+              role = {info.character.spec.role}
+              ilvl = {info.character.itemLevelEquipped}
+            />
+          )
+        })
+      }
+    </ul>
+
+  </div>
+ 
 
 </Layout>
 
+<ul>
+
+</ul>
 
 <style>
     h1 {
